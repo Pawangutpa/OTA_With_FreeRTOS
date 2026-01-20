@@ -62,5 +62,5 @@ Every firmware must include ArduinoOTA or OTA will stop working.
 
 ---
 
-## 📁 Project Structure
+
 
