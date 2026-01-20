@@ -1,0 +1,66 @@
+# ESP32 FreeRTOS OTA Blink Example
+
+This project demonstrates how to implement **Over-The-Air (OTA) firmware updates** on ESP32 while running tasks under **FreeRTOS**.  
+An LED blink task runs in parallel with a background OTA service task.
+
+---
+
+## 🚀 Features
+- WiFi-based OTA firmware upload
+- FreeRTOS task architecture
+- LED blink in independent RTOS task
+- Arduino IDE compatible
+- mDNS auto-discovery for OTA port
+
+---
+
+## 📦 Hardware Required
+- ESP32 Dev Board (WROOM / DevKit)
+- USB Cable (only for first upload)
+- LED connected to GPIO 2 (or onboard LED)
+
+---
+
+## 🛠 Software Requirements
+- Arduino IDE  
+- ESP32 Board Package  
+- ArduinoOTA Library  
+
+(macOS works directly.  
+Windows users must install Bonjour for OTA discovery.)
+
+---
+
+## 📡 How OTA Works in this Project
+
+1. First upload via USB (OTA firmware enabled)
+2. ESP32 connects to WiFi
+3. Arduino IDE detects device over network
+4. Future uploads happen wirelessly
+
+---
+
+## ▶ How to Use
+
+### First Time
+1. Open sketch in Arduino IDE  
+2. Enter your WiFi SSID & Password  
+3. Upload using USB  
+4. Open Serial Monitor (115200)  
+5. Note ESP32 IP address  
+
+### OTA Upload
+1. Keep ESP32 powered ON  
+2. Arduino IDE → Tools → Port  
+3. Select: `esp32-ota at 192.168.x.x`  
+4. Upload new code wirelessly 🎉  
+
+---
+
+## ⚠ Important
+Every firmware must include ArduinoOTA or OTA will stop working.
+
+---
+
+## 📁 Project Structure
+
